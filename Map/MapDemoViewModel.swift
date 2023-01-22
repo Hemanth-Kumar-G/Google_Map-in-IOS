@@ -88,7 +88,11 @@ extension AddLocationInMapView {
                 let reason = "Please athenticate yourself to unlock your place"
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason){ success ,authenticationError in
                     if  success {
-                        self.isUnlocked = true
+                        Task{
+                            await MainActor.run{
+                                self.isUnlocked = true
+                            }
+                        }
                     } else {
                         //error
                     }
