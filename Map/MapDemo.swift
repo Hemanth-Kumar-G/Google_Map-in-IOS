@@ -9,14 +9,14 @@ import SwiftUI
 import MapKit
 
 
-struct Location :Identifiable{
+ struct Location :Identifiable{
     
     let id = UUID()
     let name:String
     let coordinate : CLLocationCoordinate2D
     
 }
-struct ContentView: View {
+struct MapDemo: View {
     @State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.5, longitude: -0.12), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)){
         didSet{
             print(mapRegion.center.latitude)
@@ -48,6 +48,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MapDemo()
     }
 }
