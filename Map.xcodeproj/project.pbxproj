@@ -8,23 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		8003E281297C4C380001642B /* MapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003E280297C4C380001642B /* MapApp.swift */; };
-		8003E283297C4C380001642B /* MapDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003E282297C4C380001642B /* MapDemo.swift */; };
+		8003E283297C4C380001642B /*  .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003E282297C4C380001642B /*  .swift */; };
 		8003E285297C4C390001642B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8003E284297C4C390001642B /* Assets.xcassets */; };
 		8003E288297C4C390001642B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8003E287297C4C390001642B /* Preview Assets.xcassets */; };
 		8003E28F297C631A0001642B /* AddLocationInMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003E28E297C631A0001642B /* AddLocationInMapView.swift */; };
 		8003E291297CC4930001642B /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003E290297CC4930001642B /* EditView.swift */; };
 		8003E293297CD8710001642B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003E292297CD8710001642B /* Result.swift */; };
+		8003E295297D4ABE0001642B /* MapDemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003E294297D4ABE0001642B /* MapDemoViewModel.swift */; };
+		8003E297297D52E70001642B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003E296297D52E70001642B /* FileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8003E27D297C4C380001642B /* Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8003E280297C4C380001642B /* MapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapApp.swift; sourceTree = "<group>"; };
-		8003E282297C4C380001642B /* MapDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDemo.swift; sourceTree = "<group>"; };
+		8003E282297C4C380001642B /*  .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " .swift"; sourceTree = "<group>"; };
 		8003E284297C4C390001642B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8003E287297C4C390001642B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8003E28E297C631A0001642B /* AddLocationInMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationInMapView.swift; sourceTree = "<group>"; };
 		8003E290297CC4930001642B /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		8003E292297CD8710001642B /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		8003E294297D4ABE0001642B /* MapDemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDemoViewModel.swift; sourceTree = "<group>"; };
+		8003E296297D52E70001642B /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		8003E298297D5DA50001642B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +62,16 @@
 		8003E27F297C4C380001642B /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				8003E298297D5DA50001642B /* Info.plist */,
 				8003E28E297C631A0001642B /* AddLocationInMapView.swift */,
 				8003E280297C4C380001642B /* MapApp.swift */,
-				8003E282297C4C380001642B /* MapDemo.swift */,
+				8003E282297C4C380001642B /*  .swift */,
 				8003E284297C4C390001642B /* Assets.xcassets */,
 				8003E286297C4C390001642B /* Preview Content */,
 				8003E290297CC4930001642B /* EditView.swift */,
 				8003E292297CD8710001642B /* Result.swift */,
+				8003E294297D4ABE0001642B /* MapDemoViewModel.swift */,
+				8003E296297D52E70001642B /* FileManager.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -146,8 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8003E283297C4C380001642B /* MapDemo.swift in Sources */,
+				8003E295297D4ABE0001642B /* MapDemoViewModel.swift in Sources */,
+				8003E283297C4C380001642B /*  .swift in Sources */,
 				8003E293297CD8710001642B /* Result.swift in Sources */,
+				8003E297297D52E70001642B /* FileManager.swift in Sources */,
 				8003E281297C4C380001642B /* MapApp.swift in Sources */,
 				8003E291297CC4930001642B /* EditView.swift in Sources */,
 				8003E28F297C631A0001642B /* AddLocationInMapView.swift in Sources */,
@@ -281,6 +291,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Map/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Map/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,6 +321,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Map/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Map/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
