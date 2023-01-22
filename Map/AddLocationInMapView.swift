@@ -8,12 +8,20 @@
 import SwiftUI
 import MapKit
 
-struct NewLocation :Identifiable{
-    let id = UUID()
-    let name:String
-    let description:String
+struct NewLocation :Identifiable , Equatable{
+    var id = UUID()
+    var name:String
+    var description:String
     let longitude : Double
     let latitude : Double
+    
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    
+    static func ==(lhs :NewLocation ,rhs :NewLocation) -> Bool{
+        return lhs.id == rhs.id
+    }
 }
 
 struct AddLocationInMapView: View {
@@ -21,10 +29,26 @@ struct AddLocationInMapView: View {
     
     @State var locations = [NewLocation]()
     
+    @State var selectedLocation :NewLocation?
+    
     var body: some View {
         ZStack{
             Map(coordinateRegion: $mapRegion, annotationItems :  locations ){ location in
-                MapMarker(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
+                MapAnnotation(coordinate: location.coordinate){
+                    VStack{
+                        Image(systemName: "star.circle")
+                            .resizable()
+                            .foregroundColor(.red)
+                            .frame(width:45 , height: 45)
+                            .background(.white.opacity(0.75))
+                            .clipShape(Circle())
+                            .onTapGesture(perform: {
+                                selectedLocation = location
+                            })
+                        Text(location.name)
+                        Text(location.description)
+                    }
+                }
             }
             
             Circle()
@@ -59,8 +83,19 @@ struct AddLocationInMapView: View {
                 }
             }
             
-        }.ignoresSafeArea()
+        }
+        .ignoresSafeArea()
+        .sheet(item: $selectedLocation){ place in
+            EditView(location: place){ location in
+                if let index = locations.firstIndex(of:  place ){
+                    locations[index] = location
+                    
+                }
+            }
+            
+        }
     }
+
 }
 
 struct AddLocationInMapView_Previews: PreviewProvider {
