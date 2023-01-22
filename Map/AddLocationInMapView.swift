@@ -68,7 +68,7 @@ struct AddLocationInMapView: View {
                 
             }
         }else {
-            Button("unlock "){
+            Button("unlock places App"){
                 viewModel.athenticate()
             }
             .padding()
